@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ipey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="game.html">Interactive</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Hubungi Saya</h1>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label>Nama Penuh:</label>
+                <input type="text" id="fullname">
+            </div>
+            <div class="form-group">
+                <label>Alamat Emel:</label>
+                <input type="email" id="email">
+            </div>
+            <div class="form-group">
+                <label>Kata Laluan (Password):</label>
+                <input type="password" id="password">
+            </div>
+            <div class="form-group">
+                <label>Tarikh Lahir:</label>
+                <input type="date" id="dob">
+            </div>
+            <div class="form-group">
+                <label>Jantina:</label>
+                <select id="gender">
+                    <option value="">Pilih...</option>
+                    <option value="lelaki">Lelaki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Muat Naik Gambar Profil:</label>
+                <input type="file" id="photo" accept="image/*">
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">Saya bersetuju dengan terma dan syarat.</label>
+            </div>
+            <button type="submit">Hantar</button>
+            <p id="error-message" class="error"></p>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

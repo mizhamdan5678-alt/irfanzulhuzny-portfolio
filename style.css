@@ -1,0 +1,343 @@
+/* Import Font Moden dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8; /* Warna background lembut */
+    color: #334155;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Navigation Bar Gempak --- */
+header {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    padding: 1.2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* --- Layout Container & Card --- */
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    flex-grow: 1;
+}
+
+.page-title {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    border-bottom: 3px solid #3b82f6;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* --- Home Page Styling --- */
+.hero {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #3b82f6;
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    color: #0f172a;
+}
+
+.hero h2 {
+    font-size: 1.2rem;
+    color: #64748b;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.career-goal {
+    margin-top: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    border-left: 5px solid #3b82f6;
+    border-radius: 8px;
+}
+
+/* --- Profile Table Styling --- */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.profile-table th, .profile-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.profile-table th {
+    background-color: #f8fafc;
+    color: #1e293b;
+    width: 35%;
+    font-weight: 600;
+}
+
+.profile-table tr:hover {
+    background-color: #f1f5f9;
+}
+
+.skills-list {
+    padding-left: 20px;
+}
+
+/* --- Form Styling (Contact) --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    width: 20px;
+    height: 20px;
+}
+
+button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+.error {
+    color: #ef4444;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* --- Mini Game (Tic-Tac-Toe) --- */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.game-status {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 8px;
+    background-color: #1e293b;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.cell {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #3b82f6;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.cell:hover {
+    background-color: #e2e8f0;
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+.reset-btn {
+    margin-top: 25px;
+    width: 200px;
+    background-color: #ef4444;
+}
+
+.reset-btn:hover {
+    background-color: #dc2626;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e293b;
+    color: #94a3b8;
+    margin-top: auto;
+}
+
+/* --- Animasi --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* --- Responsive Design untuk Phone --- */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .profile-table th, .profile-table td {
+        display: block;
+        width: 100%;
+    }
+    .profile-table th {
+        border-bottom: none;
+    }
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+    .cell {
+        font-size: 40px;
+    }
+}
+
+/* --- Tambahan Style Game --- */
+.game-settings {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.game-settings select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #3b82f6;
+    font-weight: 600;
+    color: #1e293b;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Warna X dan O */
+.cell.x-mark {
+    color: #ef4444; /* Merah untuk X */
+}
+
+.cell.o-mark {
+    color: #3b82f6; /* Biru untuk O */
+}
+
+/* Efek Bulatan Bila Menang */
+.cell.win-circle {
+    background-color: #dcfce7;
+    border-radius: 50%;
+    transform: scale(0.9);
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+    border: 2px solid #22c55e;
+}

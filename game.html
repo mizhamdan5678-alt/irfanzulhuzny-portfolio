@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Game | Ipey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="game.html">Interactive</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container text-center">
+        <h1>Mini Game: Tic-Tac-Toe</h1>
+        <p>Jom main X dan O! Giliran pemain akan bertukar setiap kali kotak ditekan.</p>
+        
+        <div class="game-container">
+            <div class="game-settings">
+                <select id="modeSelect" onchange="toggleMode()">
+                    <option value="pvp">Lawan Kawan (PvP)</option>
+                    <option value="pve">Lawan AI (PvE)</option>
+                </select>
+                <select id="diffSelect" onchange="resetGame()" style="display: none;">
+                    <option value="easy">AI: Senang</option>
+                    <option value="medium">AI: Sederhana</option>
+                    <option value="hard">AI: Susah Gila</option>
+                </select>
+            </div>
+
+            <div id="statusText" class="game-status">Giliran: Pemain X</div>
+            <div class="board" id="board">
+                <div class="cell" onclick="makeMove(0)"></div>
+                <div class="cell" onclick="makeMove(1)"></div>
+                <div class="cell" onclick="makeMove(2)"></div>
+                <div class="cell" onclick="makeMove(3)"></div>
+                <div class="cell" onclick="makeMove(4)"></div>
+                <div class="cell" onclick="makeMove(5)"></div>
+                <div class="cell" onclick="makeMove(6)"></div>
+                <div class="cell" onclick="makeMove(7)"></div>
+                <div class="cell" onclick="makeMove(8)"></div>
+            </div>
+            <button onclick="resetGame()" class="reset-btn">Main Semula</button>
+        </div>
+           
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
